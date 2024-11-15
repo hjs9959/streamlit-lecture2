@@ -28,7 +28,7 @@ if not st.session_state["authenticated"]:
         submit_button = st.form_submit_button("로그인")
 
     if submit_button:
-        if ID == "user1" and PW == "password1":  # 로그인 정보 하드코딩 예시
+        if ID == "황종수" and PW == "1234":  # 로그인 정보 하드코딩 예시
             st.session_state["authenticated"] = True
             st.success(f"{ID}님, 환영합니다!")
         else:
