@@ -4,14 +4,14 @@ import pydeck as pdk
 import json
 
 # 데이터 로드
-file_path = 'data/교통사고+현황(구별)_20241114203251.csv'
+file_path = '교통사고+현황(구별)_20241114203251.csv'
 data = pd.read_csv(file_path, encoding='EUC-KR')
 
 # 열 이름 변경
 data = data.rename(columns={"자치구별": "구", "발생건수 (건)": "발생건수", "사망자수 (명)": "사망자수"})
 
 # GeoJSON 파일 경로
-geojson_path = 'data/서울특별시 지역구.geojson'
+geojson_path = '서울특별시 지역구.geojson'
 with open(geojson_path, encoding='utf-8') as f:
     geojson = json.load(f)
     
